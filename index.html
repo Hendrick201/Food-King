@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Imagens/WLogo.jpeg">
+    <link rel="stylesheet" href="homePage.css">
+    <title>Food King</title>
+</head>
+<body>
+    <script src="js.js"></script>
+    <header>
+        <nav>
+            <div id="Menu">
+                <div id="MenuContainer">
+                    <ul id="MenuListLeft">
+                        <li class="MenuLinkList">
+                            <div class="CardápioBorder">
+                            </div> 
+                            <a href="#About" id="0" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Sobre nós</a>
+                        </li>
+                        <li class="MenuLinkList">
+                            <div class="CardápioBorder">
+                            </div>  
+                            <a href="" id="1" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Localização</a>
+                        </li>
+                    </ul>
+                    <a id="LogoLink" href="./index.html"><img id="LogoImage" src="./Imagens/WLogo.jpeg" alt=""></a>
+                    <ul id="MenuListRight">
+                        <li class="MenuLinkList">
+                            <div class="CardápioBorder">
+                            </div>    
+                            <a href="https://site.anota.ai/foodking" id="2" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut()">Cardápio</a>
+                        </li>
+                        <li class="MenuLinkList" id="SocialMediasLi" onmouseenter="showSocialMedias()" onmouseleave="hideSocialMedias()">
+                            <label href="" id="MediaLabel">Redes Sociais</label>
+                        </li>
+                        
+                    </ul>
+                    <ul id="SocialMediasList"onmouseenter="showSocialMedias()" onmouseleave="hideSocialMedias()">      
+                        <div id="MediasBorder">
+                        </div>              
+                            <li class="SocialMediasLink">
+                                <a href="https://www.facebook.com/foodkingitba" ><img class="SocialMediasImage" src="./Imagens/1365px-Facebook_f_logo_(2019).svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" ></a>  
+                              </li>
+                              <li class="SocialMediasLink">
+                                  <a href="https://www.instagram.com/foodkingitba/"><img class="SocialMediasImage" src="./Imagens/Instagram_logo_2016.svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" ></a>  
+                              </li>
+                              <li class="SocialMediasLink">
+                                  <a href="https://api.whatsapp.com/send?phone=5534996470359&text=Olá,%20boa%20noite.%0aMe%20envie%20o%20cardápio,%20por%20favor." ><img class="SocialMediasImage" src="./Imagens/WhatsApp-Logo.png" alt=""></a>  <!--Make a link for alt-->
+                              </li>                 
+                        
+                    </ul>
+                </div>
+                <div id="FirstTextId">
+                    <h2>Food King</h2>
+                    <h1>Hamburgueria em Ituiutaba</h1>
+                    <p id="MenuText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="AboutDiv">
+                <div id="About">
+                <h3>Lorem Ipsum</h3>
+                <p id="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                </div>
+            </div>
+             <div id="SectionLocalContainer">
+                <div style="  left: 0%;" class="SectionLocalId">
+                    <div class="contentDiv">
+                        <h3>Lorem Ipsum</h3>
+                        <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                </div>
+                <div style="right: 0%;" class="SectionLocalId">
+                  
+                    <div class="contentDiv">
+                        <h3>Lorem Ipsum</h3>
+                        <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="FooterFixed">
+        <a href="https://site.anota.ai/foodking">Peça agora!</a>
+    </div>
+</body>
+</html>
