@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="homePage.css">
     <title>Food King</title>
 </head>
-<body>
+<body >
     <script src="js.js"></script>
-    <header>
+    <header id="header">
         <nav>
             <div id="Menu">
                 <div id="MenuContainer">
@@ -31,7 +31,7 @@
                         <li class="MenuLinkList">
                             <div class="CardápioBorder">
                             </div>    
-                            <a href="https://site.anota.ai/foodking" id="2" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut()">Cardápio</a>
+                            <a href="#menuSection" id="2" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut()">Cardápio</a>
                         </li>
                         <li class="MenuLinkList" id="SocialMediasLi" onmouseenter="showSocialMedias()" onmouseleave="hideSocialMedias()">
                             <label href="" id="MediaLabel">Redes Sociais</label>
@@ -54,8 +54,8 @@
                     </ul>
                 </div>
                 <div id="FirstTextId">
-                    <h2>Food King</h2>
-                    <h1>Hamburgueria em Ituiutaba</h1>
+                    <h2 id="SecondMenuText">Food King</h2>
+                    <h1 id="MainMenuText">Hamburgueria em Ituiutaba</h1>
                     <p id="MenuText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 
@@ -63,35 +63,94 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div id="AboutDiv">
-                <div id="About">
-                <h3>Lorem Ipsum</h3>
-                <p id="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+        <!-- AboutSectionStart-->
+        <section> 
+            <div class="AboutSectionsDiv">
+                <div id="AboutContainer">
+                        <div id="AboutTextContainer">
+                            <h3>Sobre nós</h3>
+                            <p id="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
                 </div>
-            </div>
-             <div id="SectionLocalContainer">
-                <div style="  left: 0%;" class="SectionLocalId">
-                    <div class="contentDiv">
-                        <h3>Lorem Ipsum</h3>
-                        <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
+                <div id="SectionLocalContainer">
+                    <div style="  left: 0%;" class="SectionLocalClass">
+                        <div class="contentDiv">
+                            <h3>Lorem Ipsum</h3>
+                            <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
+                    </div>
+                    <div style="right: 0%;" class="SectionLocalClass">
+                      
+                        <div class="contentDiv">
+                            <h3>Lorem Ipsum</h3>
+                            <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div style="right: 0%;" class="SectionLocalId">
-                  
-                    <div class="contentDiv">
-                        <h3>Lorem Ipsum</h3>
-                        <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                
+                
+            </div>
+        </section>
+        <!-- AboutSectionEnd-->
+
+         <!-- MenuSectionStart-->
+        <section id="menuSection"> 
+            <div Class="AboutSectionsDiv" >
+                <div style="display: inline-block; position: relative; left: 50%; transform: translateX(-50%);">
+                    <div id="CardápioBorderTest">
+                    </div>                
+                    <h4 id="3" >Cardápio</h4>
+                </div>
+
+                <div id="MenuSectionDiv">
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
+                    </div>
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div  class="MenuSectionTextContainer">
+                        <h4 class="NameMenuItens">Lorem Ipsum</h4>
+                        <p class="AboutText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div style="text-align: center; margin: 30px;">
+                        <a id="BuyLink" href="queromeuFk.html" style="color: #f3f307;">quero pedir meu fk</a>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- MenuSectionEnd-->
     </main>
     <div id="FooterFixed">
-        <a href="https://site.anota.ai/foodking">Peça agora!</a>
+        <a href="queromeuFk.html" style="color: #f3f307;">Peça seu fk</a>
     </div>
-</body>
+</body >
 </html>
