@@ -21,7 +21,7 @@
     <meta property="og:image:type" content="image/jpeg">
     <!--        -->
 </head>
-<body >
+<body>
     <script src="js.js"></script>
     <header id="header">
         <nav>
@@ -33,12 +33,12 @@
                         <li class="MenuLinkList">
                             <div class="CardápioBorder">
                             </div> 
-                            <a href="#About" id="0" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Sobre nós</a>
+                            <a href="#About" id="0" onclick="MenuFixedAnimationHidden()" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Sobre nós</a>
                         </li>
                         <li class="MenuLinkList">
                             <div class="CardápioBorder">
                             </div>  
-                            <a href="#Place" id="1" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Localização</a>
+                            <a href="#Place" id="1" onclick="MenuFixedAnimationHidden()" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Localização</a>
                         </li>
                     </ul>
                     <a id="LogoLink" href="./index.html"><img id="LogoImage" src="./Imagens/WLogo.png" alt=""></a>
@@ -46,7 +46,7 @@
                         <li class="MenuLinkList">
                             <div class="CardápioBorder">
                             </div>    
-                            <a href="#firstMenuSeciton" id="2" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut()">Cardápio</a>
+                            <a href="#firstMenuSeciton" id="2" onclick="MenuFixedAnimationHidden()" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut()">Cardápio</a>
                         </li>
                         <li class="MenuLinkList" style="margin-right: 0%;" id="SocialMediasLi" onmouseenter="showSocialMedias()" onmouseleave="hideSocialMedias()">
                             <label href="" id="MediaLabel">Redes Sociais</label>
@@ -69,8 +69,8 @@
                     </ul>
                 </div>
                 <div id="FirstTextId">
-                    <h2 id="SecondMenuText">Food King</h2>
-                    <h1 id="MainMenuText">Hamburgueria em Ituiutaba</h1>
+                    <h1 id="SecondMenuText">Food King</h1>
+                    <h2 id="MainMenuText">Hamburgueria em Ituiutaba</h2>
                     <p id="MenuText">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 
@@ -119,46 +119,28 @@
                             </div>         
                             <h4>Principais Burgers</h4>       
                         </div>
-                        <div>
-                             <div class="MenuHightlightBurgersContainer" >
-                            <div class="HightlightBurgersImage">
-                            </div>
-                            <div class="HightlightBurgersText">
-                                <h3>Lorem Ipsum</h3>
-                                <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                </p>
-                            </div>
+                        <div id="BurgersAlign">
+                            <div>
+                                <div class="MenuHightlightBurgersContainer" >
+                               <div class="HightlightBurgersImage">
+                               </div>
+                           </div>
+                           <div class="MenuHightlightBurgersContainer">
+                               <div class="HightlightBurgersImage">
+                               </div>
+                           </div>
+                           </div>
+                           <div class="MenuHightlightBurgersContainer">
+                               <div class="HightlightBurgersImage">
+                               </div>
+                           </div>
+                           <div class="MenuHightlightBurgersContainer"  >
+                               <div class="HightlightBurgersImage">
+                               </div>
+                           </div>
                         </div>
-                        <div class="MenuHightlightBurgersContainer" style="left: 20px;" >
-                            <div class="HightlightBurgersImage">
-                            </div>
-                            <div class="HightlightBurgersText">
-                                <h3>Lorem Ipsum</h3>
-                                <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="MenuHightlightBurgersContainer">
-                            <div class="HightlightBurgersImage">
-                            </div>
-                            <div class="HightlightBurgersText">
-                                <h3>Lorem Ipsum</h3>
-                                <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="MenuHightlightBurgersContainer"  style="left: 20px;" >
-                            <div class="HightlightBurgersImage">
-                            </div>
-                            <div class="HightlightBurgersText">
-                                <h3>Lorem Ipsum</h3>
-                                <p id="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                </p>
-                            </div>
-                        </div>
-                        <div style="text-align: center; margin: 30px; margin-top: 40px;">
-                            <a class="BuyLink" href="pedeseufk.html" style="color: #f3f307;">quero pedir agora</a>
+                        <div style="text-align: center; margin: 30px; margin-top: 20px;">
+                            <a class="BuyLink" href="Redirect.html" style="color: #f3f307;">quero pedir meu fk!</a>
                         </div>
                     </div>
         </section>
@@ -236,26 +218,38 @@
         <!-- MenuSectionEnd-->
         
         <!-- PlaceSectionStart-->
-               <section id="Place"> 
+            <section id="Place" > 
                 <div style="display: inline-block; position: relative; left: 50%; transform: translateX(-50%);">
                     <div id="CardápioBorderTest">
                     </div>                
-                    <h5>Conheça o nosso hambiente</h5>
+                    <h5>Conheça o nosso ambiente</h5>
                 </div>
-
                 <div id="PlaceSectionId">
-                    <div id="PlaceContainer">
-                            <div class="AboutTextContainer">
+                    <div class="PlaceContainer">
+                        <button id="LeftButton" onclick="leftClickSlide()">
+                            <<<
+                        </button>
+                        <button id="RightButton" onclick="rightClickSlide()">
+                            >>>
+                        </button>
+                        <div id="Slider">
+                            <div id="PlaceImage1" class="PlaceImages">
                             </div>
+                            <div id="PlaceImage2" class="PlaceImages">
+                            </div>
+                            <div id="PlaceImage3" class="PlaceImages">
+                            </div>
+                        </div>
                     </div>
-                    <div id="PlaceContainer">
-                        <div class="PlaceTextContainer">                      
+                    <div class="PlaceContainer">
+                        <div class="AboutTextContainer" id="PlaceText">
+                            Conheça o nosso ambiente fisico na cidade de ituiutaba.
                         </div>
                      </div>
                 </div>
             </section>
         <!-- PlacetSectionEnd-->
-        <footer >
+        <footer>
             <div id="FooterFixed">
                 <div class="FooterSocialMediasLink">
                     <a style="margin-left: 10px;" href="https://www.facebook.com/foodkingitba" ><img class="FooterSocialMediasImage" src="./Imagens/1365px-Facebook_f_logo_(2019).svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" ></a>  
@@ -263,10 +257,10 @@
                   <div class="FooterSocialMediasLink">
                     <a href="https://www.instagram.com/foodkingitba/"><img class="FooterSocialMediasImage" src="./Imagens/Instagram_logo_2016.svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" ></a>  
                   </div>
-            </div>
-            <div id="FooterLinks">
-                <a id="WhatsFooter" href="https://api.whatsapp.com/send?phone=5534996470359&text=Olá,%20boa%20noite.%0aMe%20envie%20o%20cardápio,%20por%20favor." ><img class="FooterSocialMediasImage" src="./Imagens/WhatsApp-Logo.png" alt=""></a>  <!--Make a link for alt-->
-                <a id="FooterLink" href="pedeseufk.html" style="color: #f3f307;">Pede seu fk</a>
+                  <div id="FooterLinks">
+                    <a id="WhatsFooter" href="https://api.whatsapp.com/send?phone=5534996470359&text=Olá,%20boa%20noite.%0aMe%20envie%20o%20cardápio,%20por%20favor." ><img class="FooterSocialMediasImage" src="./Imagens/WhatsApp-Logo.png" alt=""></a>  <!--Make a link for alt-->
+                    <a id="FooterLink" href="pedeseufk.html" style="color: #f3f307;">Pede seu fk</a>
+                </div>
             </div>
         </footer>
     </main>
