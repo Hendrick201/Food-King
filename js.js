@@ -84,7 +84,7 @@ function MenuFixedAnimationHidden()
 }
 function MenuFixedAnimationShow()
 {
-        document.getElementById("MenuContainer").style.animation = "MenuAnimShow 1s"
+        document.getElementById("MenuContainer").style.animation = "MenuAnimShow 0.8s"
         document.getElementById("MenuContainer").style.top = "0%"   
         document.getElementById("MenuContainer").style.backgroundColor = "#000000bd" 
 }
@@ -95,58 +95,127 @@ function BottomMenuFixedAnimationHidden()
 }
 function BottomMenuFixedAnimationShow()
 {
-        document.getElementById("FooterFixed").style.animation = "BottomMenuAnimShow 1s"
+        document.getElementById("FooterFixed").style.animation = "BottomMenuAnimShow 0.8s"
         document.getElementById("FooterFixed").style.bottom = "0%" 
 }
 function backgroundNone()
 {
         document.getElementById("MenuContainer").style.backgroundColor = ""     
 }
-var clickCount = 0;
-var canClick = true;
-var canResetClick = false;
-function leftClickSlide()
+
+var ClickCount = 0;
+var direction = "reverse";
+var time = setInterval(AutoSlide,8000)
+function AutoSlide()
 {
- clickCount ++;
+        document.getElementById("RightButton").disabled = true;
+        document.getElementById("LeftButton").disabled = true;
+        ClickCount ++;
 }
-function rightClickSlide()
+function ClickTest()
 {
- clickCount -= 2;
-}
-function AlSlide()
-{
-        clickCount ++;
-}
-function clickReset()
-{
-        canClick = true;
-        canResetClick = false;
-}
-function ButtonOn()
-{
+      if(ClickCount ==-1)
+      {
+              ClickCount = 3;
+      }
+      if(ClickCount ==0)
+      {
         document.getElementById("RightButton").disabled = false;
-        document.getElementById("LeftButton").disabled = false;
-}
-setInterval(SlideImagesController, 0);
-// setInterval(AlSlide, 3000); ///passa o slide sozinho 
-function SlideImagesController()
-{
-                if(clickCount ==1)
+        document.getElementById("LeftButton").disabled = false; 
+      }
+
+                if(ClickCount ==1)
                 {
-                        document.getElementById("Slider").style.animation = "SlideImagesShow 3s"
-                        document.getElementById("Slider").style.left =  "-100%" 
-                        document.getElementById("RightButton").disabled = true;
-                        document.getElementById("LeftButton").disabled = true;
-                        setInterval(ButtonOn,2999);
+                        var SliderImage1 = document.querySelector("#PlaceImage1");
+                        var SliderImage2 = document.querySelector("#PlaceImage2");
+                        var SliderImage3 = document.querySelector("#PlaceImage3");          
+                        document.getElementById("PlaceImage3").style.animation = "SlideImagesHidden 1.5s"
+                        document.getElementById("PlaceImage3").style.animationDirection = direction;
+                        document.getElementById("PlaceImage3").style.animationTimingFunction = "linear"
+                        document.getElementById("PlaceImage1").style.animation = "SlideImagesShow 1.5s"
+                        document.getElementById("PlaceImage1").style.animationDirection = direction;
+                        document.getElementById("PlaceImage1").style.animationTimingFunction = "linear"
+                        document.getElementById("PlaceImage1").addEventListener("animationend", function()
+                        {
+                                document.getElementById("RightButton").disabled = false;
+                                document.getElementById("LeftButton").disabled = false; 
+                                SliderImage1.style.transform = " translateX(-100%)"  
+                                SliderImage2.style.transform = " translateX(+200%)"  
+                                SliderImage3.style.transform = "translateX(-100%)"   
+                        })
                 }
-                if(clickCount == -1)
+                if(ClickCount ==2)
                 {
-                        document.getElementById("Slider").style.animation = "SlideImagesHidden 3s"
-                        document.getElementById("Slider").style.left =  "0%" 
-                        document.getElementById("RightButton").disabled = true;
-                        document.getElementById("LeftButton").disabled = true;
-                        setInterval(ButtonOn,2999);
-                }              
+                        
+                        var SliderImage1 = document.querySelector("#PlaceImage1");
+                        var SliderImage2 = document.querySelector("#PlaceImage2");
+                        var SliderImage3 = document.querySelector("#PlaceImage3");  
+                                SliderImage2.style.transform = " translateX(100%)"       
+                                document.getElementById("PlaceImage2").style.animation = "SlideImagesShow 1.5s"
+                                document.getElementById("PlaceImage2").style.animationDirection = direction;
+                                document.getElementById("PlaceImage2").style.animationTimingFunction = "linear"
+                                SliderImage3.style.transform = " translateX(0%)"
+                                document.getElementById("PlaceImage3").style.animation = "SlideImagesShow 1.5s"
+                                document.getElementById("PlaceImage3").style.animationDirection = direction;
+                                document.getElementById("PlaceImage3").style.animationTimingFunction = "linear"
+                                document.getElementById("PlaceImage3").addEventListener("animationend", function()
+                                {
+                                        document.getElementById("RightButton").disabled = false;
+                                        document.getElementById("LeftButton").disabled = false;
+                                        SliderImage1.style.transform = " translateX(100%)" 
+                                     
+                                })
+                
+                }
+                if(ClickCount ==3)
+                {
+                     
+                        var SliderImage1 = document.querySelector("#PlaceImage1");
+                        var SliderImage2 = document.querySelector("#PlaceImage2");
+                        var SliderImage3 = document.querySelector("#PlaceImage3");  
+                        SliderImage2.style.transform = " translateX(-100%)"       
+                        document.getElementById("PlaceImage2").style.animation = "SlideImagesHidden 1.5s"
+                        document.getElementById("PlaceImage2").style.animationDirection = direction;
+                        document.getElementById("PlaceImage2").style.animationTimingFunction = "linear"
+                        SliderImage1.style.transform = " translateX(0%)"
+                        document.getElementById("PlaceImage1").style.animation = "SlideImagesHidden 1.5s"
+                        document.getElementById("PlaceImage1").style.animationDirection = direction;
+                        document.getElementById("PlaceImage1").style.animationTimingFunction = "linear"
+                        document.getElementById("PlaceImage1").addEventListener("animationend", function()
+                        {
+                                document.getElementById("RightButton").disabled = false;
+                                document.getElementById("LeftButton").disabled = false;
+                                SliderImage1.style.transform = " translateX(0%)"
+                                SliderImage2.style.transform = " translateX(0%)"
+                                SliderImage3.style.transform = " translateX(0%)"     
+                        })
+                        ClickCount =0;  
+                }
+        
+       
+}
+setInterval(ClickTest,0);
+function leftClickSlide()
+{      
+        clearInterval(time);
+        time = setInterval(AutoSlide,8000)
+        direction = "reverse";
+        ClickCount ++;
+        document.getElementById("RightButton").disabled = true;
+        document.getElementById("LeftButton").disabled = true;
+
+}
+function rightClickSlide()  
+{
+        clearInterval(time);
+        time = setInterval(AutoSlide,8000)
+        direction = "normal";
+        ClickCount--;
+        document.getElementById("RightButton").disabled = true;
+        document.getElementById("LeftButton").disabled = true;
+       
+
+
 }
 
 var lastScrollTop = 0;
