@@ -194,6 +194,7 @@ function ClickTest()
         
        
 }
+
 setInterval(ClickTest,0);
 function leftClickSlide()
 {      
