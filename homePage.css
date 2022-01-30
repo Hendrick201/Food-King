@@ -1240,14 +1240,8 @@ p
 }
 .HightlightBurgersImage
     {
-        width: 150px;
-        height: 150px;
-        position: relative;
-        display: inline-block;
-        border-radius: 6px;
-        background-image: url(./Imagens/110.jpg);
-        background-size: cover;
-        background-position-y: 30%;
+        width: 140px;
+        height: 140px;
     }
     #SliderImageContainer
     {
