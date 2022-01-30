@@ -184,6 +184,18 @@ p
     right: 0%;
     overflow: hidden;
 }
+#MenuContainer2
+{
+    z-index: 0;
+    letter-spacing: 2px;
+    height: 60px;
+    width: 60%;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    transform: translateX(-30%);
+    overflow: hidden;
+}
 #MenuListLeft
 {
  position: absolute;
@@ -200,6 +212,7 @@ p
 }
 .MenuLinkList
 {
+    
     position: relative;
     list-style: none;
     font-size: 120%;
@@ -957,7 +970,7 @@ p
     opacity: 0%;
     position: absolute;
     right: 50%;
-    transform: translate(50%,-100%);
+    transform: translate(50%,-70%);
     padding-top: 0px;
     width: 130px;
 }
@@ -973,6 +986,7 @@ p
     list-style: none;
    
 }
+
 .SocialMediasImage
 {
     width: 30px;
@@ -1129,6 +1143,7 @@ p
     text-transform: uppercase;
     margin: 0px;
     font-size: 26px;
+    float: none;
     
 }
 #MenuListLeft
@@ -1141,18 +1156,18 @@ p
     left: 50%;
     top: 30%;
     transform: translateX(-50%);
-    display: inline-block;
+    display: block;
 }
 #MenuListRight
 {
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 0%;
     right: 0%;
     transform: translateY(0%);
     right: 50%;
-    top: 40%;
-    width: 100%;
+    top: 39%;
+    width: 80%;
     transform: translateX(50%);
     padding: 0px;
     opacity: 0%;
@@ -1162,7 +1177,7 @@ p
     opacity: 0%;
     position: absolute;
     right: 50%;
-    transform: translate(50%,-100%);
+    transform: translate(50%,-180%);
     padding-top: 0px;
     width: 130px;
 }
@@ -1299,6 +1314,15 @@ h2
     font-size: 26px;
     
 }
+#SocialMediasList
+{
+    opacity: 0%;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%,-50%);
+    padding-top: 0px;
+    width: 130px;
+}
 #MenuListLeft
 {
     position: absolute;
@@ -1320,7 +1344,7 @@ h2
     transform: translateY(0%);
     right: 50%;
     top: 42%;
-    width: 100%;
+    width: 80%;
     transform: translateX(50%);
     padding: 0px;
     opacity: 0%;
@@ -1416,5 +1440,53 @@ p
 #maps
 {
     height: 200px;
+}
+.MenuLinkList
+{
+    padding: 5px;
+    position: relative;
+    list-style: none;
+    font-size: 120%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 26px;
+    
+}
+#MenuListLeft
+{
+    position: absolute;
+    top: 0%;
+    opacity: 0%;
+    left: 0%;
+    transform: translateY(0%);
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    display: inline-block;
+}
+#MenuListRight
+{
+    display: inline-block;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translateY(0%);
+    right: 50%;
+    top: 42%;
+    width: 100%;
+    transform: translateX(50%);
+    padding: 0px;
+    opacity: 0%;
+}
+#SocialMediasList
+{
+    opacity: 0%;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%,-40%);
+    padding-top: 0px;
+    width: 130px;
 }
 }

@@ -81,9 +81,13 @@ function MenuAnimation3()
 }
 function MenuFixedAnimationHidden()
 {
-        document.getElementById("MenuContainer").style.animation = "MenuAnimHidden 0.8s"
-        document.getElementById("MenuContainer").style.top = "-120px" 
-        document.getElementById("MenuContainer").style.backgroundColor = "#000000fa"
+        var w = window.innerWidth;
+        if(w >= 745)
+        {
+                document.getElementById("MenuContainer").style.animation = "MenuAnimHidden 0.8s"
+                document.getElementById("MenuContainer").style.top = "-120px" 
+                document.getElementById("MenuContainer").style.backgroundColor = "#000000fa"
+        }
 }
 function MenuFixedAnimationShow()
 {
@@ -246,6 +250,10 @@ window.addEventListener("scroll", function()
                 var w = window.innerWidth;
                 if(w >= 745)
                 {
+                        document.getElementsByClassName("MenuLinkList")[0].style.display ="inline-block";
+                        document.getElementsByClassName("MenuLinkList")[1].style.display ="inline-block";
+                        document.getElementsByClassName("MenuLinkList")[2].style.display ="inline-block";
+                        document.getElementsByClassName("MenuLinkList")[3].style.display ="inline-block";
                         LeftMenu.style.opacity = "100%";
                         RightMenu.style.opacity = "100%";
                         MenuFixedAnimationShow();
@@ -267,6 +275,7 @@ function MenuCellPhoneShow()
 {
         if(MenuOn ==false)
         {
+                document.getElementById("MenuContainer2").style.zIndex = "0"
                 var LeftMenu = document.getElementById("MenuListLeft");
                 var RightMenu = document.getElementById("MenuListRight");
                 document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#f3f307"
@@ -290,15 +299,16 @@ function MenuCellPhoneShow()
                 document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#cfcf00"
                 document.getElementsByClassName("LineMenuButton")[1].style.backgroundColor = "#cfcf00"
                 document.getElementsByClassName("LineMenuButton")[2].style.backgroundColor = "#cfcf00"
-                LeftMenu.style.animation = "MenuCellPhoneAnimation1Hidden 1s"
-                RightMenu.style.animation = "MenuCellPhoneAnimation2Hidden 1s"
+                LeftMenu.style.animation = "MenuCellPhoneAnimation1Hidden 0.7s"
+                RightMenu.style.animation = "MenuCellPhoneAnimation2Hidden 0.7s"
                 LeftMenu.style.opacity = "0%";
                 RightMenu.style.opacity = "0%";
-                document.getElementById("MenuContainer").style.animation = " MenuDecrease 1s"
+                document.getElementById("MenuContainer").style.animation = " MenuDecrease 0.7s"
                 document.getElementById("MenuContainer").style.height = "60px"
                 LeftMenu.addEventListener("animationend", function()
                 {
                        MenuOn = false;
+                        document.getElementById("MenuContainer2").style.zIndex = "5"
                 })
         }
 
