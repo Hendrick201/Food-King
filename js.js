@@ -5,7 +5,10 @@ function showSocialMedias()
         document.getElementById("SocialMediasList").style.animation = "MediasAnimation 1s";
         document.getElementById("SocialMediasList").style.opacity = "100%";
         document.getElementById("MediasBorder").style.animation = "BorderAnimation 1s";
-        document.getElementById("MediasBorder").style.width = "100%"; 
+        document.getElementById("MediasBorder").addEventListener("animationend", function()
+        {
+                document.getElementById("MediasBorder").style.width = "100%"; 
+        })
 }
 function hideSocialMedias()
 {
@@ -80,13 +83,13 @@ function MenuFixedAnimationHidden()
 {
         document.getElementById("MenuContainer").style.animation = "MenuAnimHidden 0.8s"
         document.getElementById("MenuContainer").style.top = "-120px" 
-        document.getElementById("MenuContainer").style.backgroundColor = "#000000bd"
+        document.getElementById("MenuContainer").style.backgroundColor = "#000000fa"
 }
 function MenuFixedAnimationShow()
 {
         document.getElementById("MenuContainer").style.animation = "MenuAnimShow 0.8s"
         document.getElementById("MenuContainer").style.top = "0%"   
-        document.getElementById("MenuContainer").style.backgroundColor = "#000000bd" 
+        document.getElementById("MenuContainer").style.backgroundColor = "#000000fa;"
 }
 function BottomMenuFixedAnimationHidden()
 {
@@ -226,14 +229,31 @@ window.addEventListener("scroll", function()
    if (st > lastScrollTop)
    {
     //downscroll code
-    MenuFixedAnimationHidden();
+    
+    var w = window.innerWidth;
+    if(w >= 745)
+    {
+        MenuFixedAnimationHidden();
+    }
     BottomMenuFixedAnimationShow();
    } 
    else 
    {
            //upscroll code
-           MenuFixedAnimationShow();
-           BottomMenuFixedAnimationHidden();
+         
+                var LeftMenu = document.getElementById("MenuListLeft");
+                var RightMenu = document.getElementById("MenuListRight");
+                var w = window.innerWidth;
+                if(w >= 745)
+                {
+                        LeftMenu.style.opacity = "100%";
+                        RightMenu.style.opacity = "100%";
+                        MenuFixedAnimationShow();
+                        document.getElementById("MenuContainer").style.height = "110px";
+                }
+                BottomMenuFixedAnimationHidden();
+        
+
    }
    if(st == 0)
    {
@@ -242,6 +262,45 @@ window.addEventListener("scroll", function()
    }
    lastScrollTop = st <= 0 ? 0 : st;
 }, false);
+var MenuOn = false;
+function MenuCellPhoneShow()
+{
+        if(MenuOn ==false)
+        {
+                var LeftMenu = document.getElementById("MenuListLeft");
+                var RightMenu = document.getElementById("MenuListRight");
+                document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#f3f307"
+                document.getElementsByClassName("LineMenuButton")[1].style.backgroundColor = "#f3f307"
+                document.getElementsByClassName("LineMenuButton")[2].style.backgroundColor = "#f3f307"
+                LeftMenu.style.animation = "MenuCellPhoneAnimation1 1s"
+                RightMenu.style.animation = "MenuCellPhoneAnimation2 1s"
+                LeftMenu.style.opacity = "100%";
+                RightMenu.style.opacity = "100%";
+                document.getElementById("MenuContainer").style.animation = " MenuIncrease 1s"
+                document.getElementById("MenuContainer").style.height = "100%"
+                LeftMenu.addEventListener("animationend", function()
+                {
+                       MenuOn = true;
+                })
+        }
+        if(MenuOn ==true)
+        {
+                var LeftMenu = document.getElementById("MenuListLeft");
+                var RightMenu = document.getElementById("MenuListRight");
+                document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#cfcf00"
+                document.getElementsByClassName("LineMenuButton")[1].style.backgroundColor = "#cfcf00"
+                document.getElementsByClassName("LineMenuButton")[2].style.backgroundColor = "#cfcf00"
+                LeftMenu.style.animation = "MenuCellPhoneAnimation1Hidden 1s"
+                RightMenu.style.animation = "MenuCellPhoneAnimation2Hidden 1s"
+                LeftMenu.style.opacity = "0%";
+                RightMenu.style.opacity = "0%";
+                document.getElementById("MenuContainer").style.animation = " MenuDecrease 1s"
+                document.getElementById("MenuContainer").style.height = "60px"
+                LeftMenu.addEventListener("animationend", function()
+                {
+                       MenuOn = false;
+                })
+        }
 
-
+}
 

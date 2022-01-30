@@ -24,6 +24,10 @@ a
 {
     text-decoration: none;
     color: #cfcf00;
+    border: solid 1px #f3f307; 
+    padding: 10px 40px 10px 40px; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
 }
 h2
 {
@@ -42,6 +46,10 @@ p
 {
     height: 150px;
 }
+#div
+{
+    width: 100%;
+}
 #MenuContainer
 {
     letter-spacing: 2px;
@@ -55,6 +63,7 @@ p
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    border: none;
 
 }
 #LogoImage
@@ -67,4 +76,11 @@ p
 #LogoImage:hover
 {
     width: 110px;
+}
+@media  screen and (max-width: 500px)
+{
+    h1
+    {
+        font-size: 10px;
+    }
 }
