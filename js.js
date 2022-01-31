@@ -213,7 +213,6 @@ function leftClickSlide()
 {      
         clearInterval(time);
         time = setInterval(AutoSlide,8000)
-        direction = "reverse";
         ClickCount ++;
         document.getElementById("RightButton").disabled = true;
         document.getElementById("LeftButton").disabled = true;
@@ -223,11 +222,6 @@ function rightClickSlide()
 {
         clearInterval(time);
         time = setInterval(AutoSlide,8000)
-        direction = "normal";
-        ClickCount--;
-        document.getElementById("RightButton").disabled = true;
-        document.getElementById("LeftButton").disabled = true;
-       
 
 
 }
