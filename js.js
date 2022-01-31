@@ -94,6 +94,7 @@ function MenuFixedAnimationShow()
         document.getElementById("MenuContainer").style.animation = "MenuAnimShow 0.8s"
         document.getElementById("MenuContainer").style.top = "0%"   
         document.getElementById("MenuContainer").style.backgroundColor = "#000000fa;"
+        document.getElementById("MenuContainer").style.height = "110px";
 }
 function BottomMenuFixedAnimationHidden()
 {
@@ -121,6 +122,11 @@ function AutoSlide()
 }
 function ClickTest()
 {
+        var w = window.innerWidth;
+        if(w >= 745)
+        {
+                MenuOn = false;
+        }
       if(ClickCount ==-1)
       {
               ClickCount = 3;
@@ -257,7 +263,9 @@ window.addEventListener("scroll", function()
                         LeftMenu.style.opacity = "100%";
                         RightMenu.style.opacity = "100%";
                         MenuFixedAnimationShow();
-                        document.getElementById("MenuContainer").style.height = "110px";
+                        document.getElementById("CellPhoneMenuList").style.opacity = "0%"
+                        document.getElementById("CellPhoneMenuList").style.zIndex = "0"
+                        document.getElementById("MenuContainer2").style.zIndex = "0"
                 }
                 BottomMenuFixedAnimationHidden();
         
@@ -276,36 +284,31 @@ function MenuCellPhoneShow()
         if(MenuOn ==false)
         {
                 document.getElementById("MenuContainer2").style.zIndex = "0"
-                var LeftMenu = document.getElementById("MenuListLeft");
-                var RightMenu = document.getElementById("MenuListRight");
+                var CellPhoneMenu = document.getElementById("CellPhoneMenuList");
                 document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#f3f307"
                 document.getElementsByClassName("LineMenuButton")[1].style.backgroundColor = "#f3f307"
                 document.getElementsByClassName("LineMenuButton")[2].style.backgroundColor = "#f3f307"
-                LeftMenu.style.animation = "MenuCellPhoneAnimation1 1s"
-                RightMenu.style.animation = "MenuCellPhoneAnimation2 1s"
-                LeftMenu.style.opacity = "100%";
-                RightMenu.style.opacity = "100%";
+                CellPhoneMenu.style.animation = "MenuCellPhoneAnimationShow 1s"
+                CellPhoneMenu.style.opacity = "100%";
+                CellPhoneMenu.style.zIndex = "4";
                 document.getElementById("MenuContainer").style.animation = " MenuIncrease 1s"
                 document.getElementById("MenuContainer").style.height = "100%"
-                LeftMenu.addEventListener("animationend", function()
+                CellPhoneMenu.addEventListener("animationend", function()
                 {
                        MenuOn = true;
                 })
         }
         if(MenuOn ==true)
         {
-                var LeftMenu = document.getElementById("MenuListLeft");
-                var RightMenu = document.getElementById("MenuListRight");
+                var CellPhoneMenu = document.getElementById("CellPhoneMenuList");
                 document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#cfcf00"
                 document.getElementsByClassName("LineMenuButton")[1].style.backgroundColor = "#cfcf00"
                 document.getElementsByClassName("LineMenuButton")[2].style.backgroundColor = "#cfcf00"
-                LeftMenu.style.animation = "MenuCellPhoneAnimation1Hidden 0.7s"
-                RightMenu.style.animation = "MenuCellPhoneAnimation2Hidden 0.7s"
-                LeftMenu.style.opacity = "0%";
-                RightMenu.style.opacity = "0%";
+                CellPhoneMenu.style.animation = "MenuCellPhoneAnimationHidden 0.7s"
+                CellPhoneMenu.style.opacity = "0%";
                 document.getElementById("MenuContainer").style.animation = " MenuDecrease 0.7s"
                 document.getElementById("MenuContainer").style.height = "60px"
-                LeftMenu.addEventListener("animationend", function()
+                CellPhoneMenu.addEventListener("animationend", function()
                 {
                        MenuOn = false;
                         document.getElementById("MenuContainer2").style.zIndex = "5"
