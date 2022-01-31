@@ -915,8 +915,8 @@ p
 {
     display: inline-block;
     position: fixed;
-    right: 5%;
-    top: 3%;
+    right: 15px;
+    top: 20px;
 }
 #LogoImage
 {
@@ -951,7 +951,7 @@ z-index: 0;
 {
     opacity: 0%;
     position: absolute;
-    right: 50%;
+    right: 500%;
     transform: translate(50%,-70%);
     padding-top: 0px;
     width: 130px;
@@ -1143,8 +1143,8 @@ z-index: 0;
 {
     opacity: 0%;
     position: absolute;
-    right: 50%;
-    transform: translate(50%,-180%);
+    right: 500%;
+    transform: translate(50%,-70%);
     padding-top: 0px;
     width: 130px;
 }
@@ -1292,8 +1292,8 @@ h2
 {
     opacity: 0%;
     position: absolute;
-    right: 50%;
-    transform: translate(50%,-50%);
+    right: 500%;
+    transform: translate(50%,-70%);
     padding-top: 0px;
     width: 130px;
 }

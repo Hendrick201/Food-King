@@ -89,6 +89,7 @@ function MenuFixedAnimationHidden()
                 document.getElementById("MenuContainer").style.backgroundColor = "#000000fa"
         }
 }
+
 function MenuFixedAnimationShow()
 {
         document.getElementById("MenuContainer").style.animation = "MenuAnimShow 0.8s"
@@ -123,10 +124,6 @@ function AutoSlide()
 function ClickTest()
 {
         var w = window.innerWidth;
-        if(w >= 745)
-        {
-                MenuOn = false;
-        }
       if(ClickCount ==-1)
       {
               ClickCount = 3;
@@ -225,7 +222,18 @@ function rightClickSlide()
 
 
 }
-
+setInterval(MenuFix,0)
+function MenuFix()
+{
+        var w = window.innerWidth;
+        var LeftMenu = document.getElementById("MenuListLeft");
+        var RightMenu = document.getElementById("MenuListRight");
+        if(w <= 725)
+        {
+                LeftMenu.style.opacity = "0%";
+                RightMenu.style.opacity = "0%";
+        }
+}
 var lastScrollTop = 0;
 window.addEventListener("scroll", function()
 {
@@ -235,11 +243,28 @@ window.addEventListener("scroll", function()
     //downscroll code
     
     var w = window.innerWidth;
-    if(w >= 745)
+    if(w >= 726)
     {
+            
         MenuFixedAnimationHidden();
     }
     BottomMenuFixedAnimationShow();
+
+    var LeftMenu = document.getElementById("MenuListLeft");
+    var RightMenu = document.getElementById("MenuListRight");
+    if(w <= 725)
+    {
+
+            LeftMenu.style.opacity = "0%";
+            RightMenu.style.opacity = "0%";
+            
+            if(MenuOn == false)
+            {
+                document.getElementById("MenuContainer").style.height = "60px";
+            }
+           
+           
+    }
    } 
    else 
    {
@@ -248,7 +273,7 @@ window.addEventListener("scroll", function()
                 var LeftMenu = document.getElementById("MenuListLeft");
                 var RightMenu = document.getElementById("MenuListRight");
                 var w = window.innerWidth;
-                if(w >= 745)
+                if(w >= 726)
                 {
                         document.getElementsByClassName("MenuLinkList")[0].style.display ="inline-block";
                         document.getElementsByClassName("MenuLinkList")[1].style.display ="inline-block";
@@ -285,7 +310,7 @@ function MenuCellPhoneShow()
                 CellPhoneMenu.style.animation = "MenuCellPhoneAnimationShow 1s"
                 CellPhoneMenu.style.opacity = "100%";
                 CellPhoneMenu.style.zIndex = "4";
-                document.getElementById("MenuContainer").style.animation = " MenuIncrease 1s"
+                document.getElementById("MenuContainer").style.animation = " MenuIncrease 0.7s"
                 document.getElementById("MenuContainer").style.height = "100%"
                 CellPhoneMenu.addEventListener("animationend", function()
                 {
