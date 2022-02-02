@@ -117,8 +117,8 @@ var direction = "reverse";
 var time = setInterval(AutoSlide,8000)
 function AutoSlide()
 {
-        document.getElementById("RightButton").disabled = true;
-        document.getElementById("LeftButton").disabled = true;
+       // document.getElementById("RightButton").disabled = true;
+     //   document.getElementById("LeftButton").disabled = true;
         ClickCount ++;
 }
 function ClickTest()
@@ -130,8 +130,8 @@ function ClickTest()
       }
       if(ClickCount ==0)
       {
-        document.getElementById("RightButton").disabled = false;
-        document.getElementById("LeftButton").disabled = false; 
+      //  document.getElementById("RightButton").disabled = false;
+      //  document.getElementById("LeftButton").disabled = false; 
       }
 
                 if(ClickCount ==1)
@@ -147,8 +147,8 @@ function ClickTest()
                         document.getElementById("PlaceImage1").style.animationTimingFunction = "linear"
                         document.getElementById("PlaceImage1").addEventListener("animationend", function()
                         {
-                                document.getElementById("RightButton").disabled = false;
-                                document.getElementById("LeftButton").disabled = false; 
+                             //   document.getElementById("RightButton").disabled = false;
+                               // document.getElementById("LeftButton").disabled = false; 
                                 SliderImage1.style.transform = " translateX(-100%)"  
                                 SliderImage2.style.transform = " translateX(+200%)"  
                                 SliderImage3.style.transform = "translateX(-100%)"   
@@ -170,8 +170,8 @@ function ClickTest()
                                 document.getElementById("PlaceImage3").style.animationTimingFunction = "linear"
                                 document.getElementById("PlaceImage3").addEventListener("animationend", function()
                                 {
-                                        document.getElementById("RightButton").disabled = false;
-                                        document.getElementById("LeftButton").disabled = false;
+                                     //   document.getElementById("RightButton").disabled = false;
+                                      //  document.getElementById("LeftButton").disabled = false;
                                         SliderImage1.style.transform = " translateX(100%)" 
                                      
                                 })
@@ -193,8 +193,8 @@ function ClickTest()
                         document.getElementById("PlaceImage1").style.animationTimingFunction = "linear"
                         document.getElementById("PlaceImage1").addEventListener("animationend", function()
                         {
-                                document.getElementById("RightButton").disabled = false;
-                                document.getElementById("LeftButton").disabled = false;
+                              //  document.getElementById("RightButton").disabled = false;
+                               // document.getElementById("LeftButton").disabled = false;
                                 SliderImage1.style.transform = " translateX(0%)"
                                 SliderImage2.style.transform = " translateX(0%)"
                                 SliderImage3.style.transform = " translateX(0%)"     
@@ -211,8 +211,8 @@ function leftClickSlide()
         clearInterval(time);
         time = setInterval(AutoSlide,8000)
         ClickCount ++;
-        document.getElementById("RightButton").disabled = true;
-        document.getElementById("LeftButton").disabled = true;
+      //  document.getElementById("RightButton").disabled = true;
+       // document.getElementById("LeftButton").disabled = true;
 
 }
 function rightClickSlide()  
