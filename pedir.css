@@ -20,12 +20,20 @@ body
 {
     background-color: #080000;
 }
+.links
+{
+    border: solid 1px #f3f307; 
+    width: 95%;
+    position: relative;
+    left: 50%;
+    padding: 10px 0px 10px 0px; 
+    transform: translateX(-50%);
+}
 a
 {
     text-decoration: none;
     color: #cfcf00;
-    border: solid 1px #f3f307; 
-    padding: 10px 40px 10px 40px; 
+
     letter-spacing: 2px; 
     text-transform: uppercase;
 }
