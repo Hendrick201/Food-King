@@ -1097,7 +1097,7 @@ h3
 }
 p
 {
-    font-size: 12px;
+    font-size: 11.5px;
 }
 .contentDiv
 {
@@ -1197,6 +1197,10 @@ z-index: 0;
     background-color: #000000ee;
     top: 0%;
 }
+.MenuSectionTextContainer
+{
+    height: 130px;
+}
 .CardápioBorder
 {
     display: none;
@@ -1260,8 +1264,138 @@ z-index: 0;
     }
 }
 
+@media  screen and (max-width: 391px)
+{
 
-@media  screen and (max-width: 401px)
+    #MenuContainer
+{
+    height: 60px;
+    background-color: #000000ee;
+    top: 0%;
+}
+    .BuyLink
+    {
+        font-size: 12px;
+    }
+    .HightlightBurgersImage
+    {
+        width: 120px;
+        height: 120px;
+    }
+    .NameMenuItens
+    {
+        font-size: 10px;
+    }
+    h1
+    {
+        font-size: 18px;
+    }
+    h2
+    {
+        font-size: 13px;
+    }
+    h3
+    {
+        font-size: 12px;
+    }
+    h4
+    {
+        font-size: 12px;
+    }
+    h5
+    {
+        font-size: 12px;
+    }
+    #SliderImageContainer
+    {
+        height: 200px;
+
+    }
+    .MenuLinkList
+{
+    font-size: 10px;
+}
+.SectionLocalClass
+{
+    background-size: 40%;
+    background-position-x: left;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    height: 180px;
+}
+#RightAbout
+{
+    border-radius: 5px;
+    text-align: right;
+    width: 100%;
+    margin-top: 10px;
+    background-size: 40%;
+    background-position-x: right;
+    background-position-y: 25%;
+    display: block;
+    position: relative;
+}
+#RightAboutText
+{
+    position: absolute;
+    right: 40%;
+}
+.contentDiv
+{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: absolute;
+    left: 40%;
+    display: inline-block;
+}
+p
+{
+    font-size: 9px;
+}
+#Menu
+{
+    position: relative;
+    height: 280px;
+}
+#maps
+{
+    height: 200px;
+}
+.MenuLinkList
+{
+    padding: 5px;
+    position: relative;
+    list-style: none;
+    font-size: 120%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 26px;
+    
+}
+#MenuListLeft
+{
+opacity: 0%;
+z-index: 0;
+}
+#MenuListRight
+{
+    opacity: 0%;
+    z-index: 0;
+}
+#SocialMediasList
+{
+    opacity: 0%;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%,-40%);
+    padding-top: 0px;
+    width: 130px;
+}
+}
+@media  screen and (max-width: 330px)
 {
 
     #MenuContainer
