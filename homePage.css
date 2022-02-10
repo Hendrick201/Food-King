@@ -1,3 +1,20 @@
+::-webkit-scrollbar 
+{
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 @font-face 
 {
     font-family: Bahnschrift;
@@ -451,8 +468,8 @@ overflow: hidden;
     border-radius: 6px;
     position: relative;
     margin-top: 20px;
-    height: 150px;
     overflow-y: scroll;
+    height: 150px;
 }
 
 
@@ -487,6 +504,10 @@ overflow: hidden;
     font-size: 18px;
     display: inline-block;
 }
+#HightlightBurgersDiv
+{
+    display: inline-block;
+}
 #BurgersAlign
 {
     text-align: center;
@@ -504,8 +525,8 @@ overflow: hidden;
 }
 .HightlightBurgersImage
 {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
     position: relative;
     display: inline-block;
     border-radius: 6px;
@@ -552,8 +573,9 @@ margin-bottom: 20px;
 }
 #RightBurgers
 {
-position: relative;
-right: -10%;
+position: absolute;
+top: 0%;
+right: 0%;
 }
 #LeftBurgers
 {
@@ -768,6 +790,10 @@ left: 0%;
 }
 @media  screen and (max-width: 943px)
 {
+    #HightlightBurgersDiv
+{
+    display: block;
+}
 #AboutUs
 {
     font-size: 24px;
@@ -868,6 +894,7 @@ p
 }
 @media  screen and (max-width: 725px)
 {
+
 #AboutUs
 {
     font-size: 18px;
@@ -1232,8 +1259,12 @@ z-index: 0;
     }
 }
 
-@media  screen and (max-width: 376px)
+@media  screen and (max-width: 393px)
 {
+    p
+    {
+        font-size: 10px;
+    }
     .HightlightBurgersImage
     {
         width: 130px;
@@ -1247,7 +1278,7 @@ z-index: 0;
 }
     .NameMenuItens
     {
-        font-size: 17px;
+        font-size: 14px;
     }
     h4
     {
@@ -1309,6 +1340,7 @@ z-index: 0;
 }
 @media  screen and (max-width: 281px)
 {
+
     #MenuContainer
 {
     height: 60px;
@@ -1326,7 +1358,7 @@ z-index: 0;
     }
     .NameMenuItens
     {
-        font-size: 12px;
+        font-size: 10px;
     }
     h1
     {
@@ -1393,7 +1425,7 @@ z-index: 0;
 }
 p
 {
-    font-size: 10px;
+    font-size: 8px;
 }
 #Menu
 {
