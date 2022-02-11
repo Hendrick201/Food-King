@@ -64,7 +64,7 @@ h2
 }
 #AboutUs
 {
-    font-size: 32px;
+    font-size: 28px;
 }
 h3
 {
@@ -116,6 +116,21 @@ p
     text-align: center;
     border-bottom: 1px solid #f3f307;
     margin-bottom: 50px;
+}
+@keyframes PageAnimation1
+{
+    from
+    {
+        position: relative;
+        left: -20%;
+        opacity: 0%;
+    }
+    to
+    {
+        position: relative;
+        left: 0%;
+        opacity: 100%;
+    }
 }
 @keyframes MenuImageAnimation
 {
@@ -459,7 +474,7 @@ left: 50%;
 transform: translateX(-50%);
 text-align: center;
 width: 100%;
-margin-bottom: 35px;
+margin-bottom: 55px;
 background-color: #0f0f0f3b;
 overflow: hidden;
 }
@@ -467,7 +482,7 @@ overflow: hidden;
 {
     border-radius: 6px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 5px;
     overflow-y: scroll;
     height: 150px;
 }
@@ -1095,6 +1110,7 @@ h3
 {
     font-size: 14px;
 }
+
 p
 {
     font-size: 11.5px;
@@ -1261,6 +1277,10 @@ z-index: 0;
     {
         height: 200px;
 
+    }
+    .NameMenuItens
+    {
+        font-size: 15px;
     }
 }
 

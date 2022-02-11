@@ -241,7 +241,7 @@ window.addEventListener("scroll", function()
    if (st > lastScrollTop)
    {
     //downscroll code
-    
+  
     var w = window.innerWidth;
     if(w >= 726)
     {
