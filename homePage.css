@@ -652,6 +652,10 @@ left: 0%;
 {
     background-color:#15131442;
 }
+#menuSectionTittle
+{
+    opacity: 0%;
+}
 #SecondSectionBuyLink
 {
     opacity: 0%;
