@@ -29,6 +29,10 @@
     font-size: 100%;
     font-family: Bahnschrift;
 }
+#SecondSectionTittle
+{
+    opacity: 0%;
+}
 header
 {
     height: 100%;
@@ -526,6 +530,7 @@ overflow: hidden;
 #BurgersAlign
 {
     text-align: center;
+    opacity: 0%;
 }
 #MenuButton
 {
@@ -570,13 +575,16 @@ transform: translateX(-50%);
 width: 100%;
 margin-top: 20px;
 margin-bottom: 30px;
-overflow: hidden;
 }
 .Tables
 {
     display: inline-block;
     width: 45%;
     position: absolute;
+}
+#menuSectionTittle
+{
+    text-align: center; position: relative; left: 50%; transform: translateX(-50%); border-bottom: 1px solid #f3f307; padding-bottom: 10px;
 }
 .MenuSectionTextContainer
 {
@@ -586,6 +594,7 @@ border-bottom: 1px solid #f3f307;
 padding-bottom: 30px;
 margin-bottom: 20px;
 height: 90px;
+opacity: 0%;
 }
 #RightBurgers
 {
@@ -643,6 +652,10 @@ left: 0%;
 {
     background-color:#15131442;
 }
+#SecondSectionBuyLink
+{
+    opacity: 0%;
+}
 #RightButton
 {
     z-index: 1;
@@ -654,6 +667,62 @@ left: 0%;
     background-color:#15131400;
     border: none;
     font-size: 40px;
+}
+@keyframes SectionsAnimation0
+{
+    from
+    {
+        opacity: 0%;
+        position: relative;
+        left: 15%;
+    }
+    to
+    {
+        opacity: 100%;
+        position: relative;
+        left: 0%; 
+    }
+}
+@keyframes SectionsAnimation1
+{
+    from
+    {
+        opacity: 0%;
+        position: relative;
+        right: 15%;
+    }
+    to
+    {
+        opacity: 100%;
+        position: relative;
+        right: 0%; 
+    }
+}
+@keyframes SectionsAnimation2
+{
+    from
+    {
+        opacity: 0%;
+        position: relative;
+        left: 65%;
+    }
+    to
+    {
+        opacity: 100%;
+        position: relative;
+        left: 50%; 
+    }
+}
+@keyframes SectionsAnimation3
+{
+    from
+    {
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
 }
 @keyframes SlideImagesHidden
 {
@@ -1424,6 +1493,7 @@ z-index: 0;
     background-color: #000000ee;
     top: 0%;
 }
+
     .BuyLink
     {
         font-size: 12px;
@@ -1466,6 +1536,7 @@ z-index: 0;
 {
     font-size: 10px;
 }
+
 .SectionLocalClass
 {
     background-size: 40%;

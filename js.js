@@ -241,7 +241,97 @@ window.addEventListener("scroll", function()
    if (st > lastScrollTop)
    {
     //downscroll code
-  
+    var firstSectionDistance =  document.getElementById("firstMenuSection").getBoundingClientRect().top;
+    var secondSectionDistance = document.getElementById("SecondSection").getBoundingClientRect().top;
+    if(firstSectionDistance < 540)
+    {
+            this.document.getElementById("BurgersAlign").style.animation = "SectionsAnimation1 2s";
+            this.document.getElementById("buyDiv").style.animation = "SectionsAnimation1 2s";
+            this.document.getElementById("menuSectionTittle").style.animation = "SectionsAnimation2 2s";
+            document.getElementById("BurgersAlign").addEventListener("animationend", function()
+            {
+                    document.getElementById("BurgersAlign").style.opacity = "100%"; 
+                    document.getElementById("menuSectionTittle").style.opacity = "100%"; 
+            })
+    }
+    if(secondSectionDistance < 512)
+    {
+        this.document.getElementById("SecondSectionTittle").style.animation = "SectionsAnimation3 1.5s"; 
+        document.getElementById("SecondSectionTittle").addEventListener("animationend", function()
+        {
+                document.getElementById("SecondSectionTittle").style.opacity = "100%"; 
+           
+        })
+        document.querySelectorAll(".MenuSectionTextContainer")[0].style.animation = "SectionsAnimation1 0.8s 1s";
+        document.querySelectorAll(".MenuSectionTextContainer")[0].addEventListener("animationend", function()
+        {
+                document.querySelectorAll(".MenuSectionTextContainer")[0].style.opacity = "100%";
+                document.querySelectorAll(".MenuSectionTextContainer")[1].style.animation = "SectionsAnimation1 0.8s"; 
+                document.querySelectorAll(".MenuSectionTextContainer")[1].addEventListener("animationend", function()
+                {
+                        document.querySelectorAll(".MenuSectionTextContainer")[1].style.opacity = "100%";
+                        document.querySelectorAll(".MenuSectionTextContainer")[2].style.animation = "SectionsAnimation1 0.8s"; 
+                        document.querySelectorAll(".MenuSectionTextContainer")[2].addEventListener("animationend", function()
+                        {
+                                document.querySelectorAll(".MenuSectionTextContainer")[2].style.opacity = "100%";
+                                document.querySelectorAll(".MenuSectionTextContainer")[3].style.animation = "SectionsAnimation1 0.8s"; 
+                                document.querySelectorAll(".MenuSectionTextContainer")[3].addEventListener("animationend", function()
+                                {
+                                        document.querySelectorAll(".MenuSectionTextContainer")[3].style.opacity = "100%";
+                                        document.querySelectorAll(".MenuSectionTextContainer")[4].style.animation = "SectionsAnimation1 0.8s"; 
+                                        document.querySelectorAll(".MenuSectionTextContainer")[4].addEventListener("animationend", function()
+                                        {
+                                                document.querySelectorAll(".MenuSectionTextContainer")[4].style.opacity = "100%";     
+                                        })
+                                   
+                                })
+                           
+                        })
+                       
+                   
+                })
+        })
+        document.querySelectorAll(".MenuSectionTextContainer")[5].style.animation = "SectionsAnimation0 0.8s 1s";
+        document.querySelectorAll(".MenuSectionTextContainer")[5].addEventListener("animationend", function()
+        {
+                document.querySelectorAll(".MenuSectionTextContainer")[5].style.opacity = "100%";
+                document.querySelectorAll(".MenuSectionTextContainer")[6].style.animation = "SectionsAnimation0 0.8s"; 
+                document.querySelectorAll(".MenuSectionTextContainer")[6].addEventListener("animationend", function()
+                {
+                        document.querySelectorAll(".MenuSectionTextContainer")[6].style.opacity = "100%";
+                        document.querySelectorAll(".MenuSectionTextContainer")[7].style.animation = "SectionsAnimation0 0.8s"; 
+                        document.querySelectorAll(".MenuSectionTextContainer")[7].addEventListener("animationend", function()
+                        {
+                                document.querySelectorAll(".MenuSectionTextContainer")[7].style.opacity = "100%";
+                                document.querySelectorAll(".MenuSectionTextContainer")[8].style.animation = "SectionsAnimation0 0.8s"; 
+                                document.querySelectorAll(".MenuSectionTextContainer")[8].addEventListener("animationend", function()
+                                {
+                                        document.querySelectorAll(".MenuSectionTextContainer")[8].style.opacity = "100%";
+                                        document.querySelectorAll(".MenuSectionTextContainer")[9].style.animation = "SectionsAnimation0 0.8s"; 
+                                        document.querySelectorAll(".MenuSectionTextContainer")[9].addEventListener("animationend", function()
+                                        {
+                                                document.querySelectorAll(".MenuSectionTextContainer")[9].style.opacity = "100%";  
+                                        })
+                                        document.querySelectorAll(".MenuSectionTextContainer")[10].style.animation = "SectionsAnimation0 0.8s"; 
+                                        document.querySelectorAll(".MenuSectionTextContainer")[10].addEventListener("animationend", function()
+                                        {
+                                                document.querySelectorAll(".MenuSectionTextContainer")[10].style.opacity = "100%";     
+                                        })
+                                   
+                                })
+                           
+                        })
+                       
+                   
+                })
+                document.getElementById("SecondSectionBuyLink").style.animation = "SectionsAnimation3 0.8s 2s"; 
+                document.getElementById("SecondSectionBuyLink").addEventListener("animationend", function()
+                {
+                        document.getElementById("SecondSectionBuyLink").style.opacity = "100%"; 
+                })
+
+        })
+    }
     var w = window.innerWidth;
     if(w >= 726)
     {

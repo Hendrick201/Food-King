@@ -48,6 +48,7 @@ body
 }
 a
 {
+    display: block;
     text-decoration: none;
     color: #cfcf00;
     letter-spacing: 2px; 
