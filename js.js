@@ -254,7 +254,7 @@ window.addEventListener("scroll", function()
                     document.getElementById("menuSectionTittle").style.opacity = "100%"; 
             })
     }
-    if(secondSectionDistance < 512)
+    if(secondSectionDistance < 530)
     {
         this.document.getElementById("SecondSectionTittle").style.animation = "SectionsAnimation3 1.5s"; 
         document.getElementById("SecondSectionTittle").addEventListener("animationend", function()
