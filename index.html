@@ -38,7 +38,7 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
-<body >
+<body onclick="hideSocialMedias()">
     <script src="js.js"></script>
     <header id="header">
         <nav>
@@ -51,38 +51,37 @@
                 <div id="MenuContainer">
                     <ul id="CellPhoneMenuList">
                         <li class="CellPhoneMenuLinkList">
-                            <div class="CardápioBorder">
-                            </div> 
                             <a href="#About" id="0" onclick=" MenuCellPhoneShow(MenuOn = true)">Sobre nós</a>
                         </li>
-                        <li class="CellPhoneMenuLinkList">
-                            <div class="CardápioBorder">
-                            </div>  
+                        <li class="CellPhoneMenuLinkList"> 
                             <a href="#Place" id="1" onclick="MenuCellPhoneShow(MenuOn = true)">Localização</a>
                         </li>
-                        <li class="CellPhoneMenuLinkList">
-                            <div class="CardápioBorder">
-                            </div>    
+                        <li class="CellPhoneMenuLinkList">  
                             <a  href="#firstMenuSection" id="2" onclick="MenuCellPhoneShow(MenuOn = true)">Cardápio</a>
                         </li>
-                        <li class="SocialMediasLink">
-                            <a href="https://www.facebook.com/foodkingitba" ><img class="SocialMediasImage" src="./Imagens/1365px-Facebook_f_logo_(2019).svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" ></a>  
-                          </li>
-                          <li class="SocialMediasLink">
-                              <a href="https://www.instagram.com/foodkingitba/"><img class="SocialMediasImage" src="./Imagens/Instagram_logo_2016.svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" ></a>  
-                          </li>
-                          <li class="SocialMediasLink">
-                              <a href="https://api.whatsapp.com/send?phone=5534996470359&text=Oii,%20pode%20me%20enviar%20o%20cardápio?%20 &#127828;" ><img class="SocialMediasImage" src="./Imagens/WhatsApp-Logo.png" alt=""></a>  <!--Make a link for alt-->
-                          </li>          
+                        <ul>
+                            <div id="MediasBorderCellphone">
+                            </div>  
+                            <li class="SocialMediasLink">
+                                <a href="https://www.facebook.com/foodkingitba" ><img class="SocialMediasImage" src="./Imagens/1365px-Facebook_f_logo_(2019).svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1365px-Facebook_f_logo_%282019%29.svg.png" ></a>  
+                              </li>
+                              <li class="SocialMediasLink">
+                                  <a href="https://www.instagram.com/foodkingitba/"><img class="SocialMediasImage" src="./Imagens/Instagram_logo_2016.svg.webp" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" ></a>  
+                              </li>
+                              <li class="SocialMediasLink">
+                                  <a href="https://api.whatsapp.com/send?phone=5534996470359&text=Oii,%20pode%20me%20enviar%20o%20cardápio?%20 &#127828;" ><img class="SocialMediasImage" src="./Imagens/WhatsApp-Logo.png" alt=""></a>  <!--Make a link for alt-->
+                              </li>          
+                        </ul>
+                        
                     </ul>
                     <ul id="MenuListLeft">
                         <li class="MenuLinkList">
-                            <div class="CardápioBorder">
+                            <div class="CardapioBorder">
                             </div> 
                             <a href="#About" id="0" onclick="MenuFixedAnimationHidden(), MenuCellPhoneShow(MenuOn = true)" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Sobre nós</a>
                         </li>
                         <li class="MenuLinkList">
-                            <div class="CardápioBorder">
+                            <div class="CardapioBorder">
                             </div>  
                             <a href="#Place" id="1" onclick="MenuFixedAnimationHidden(), MenuCellPhoneShow(MenuOn = true)" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)" >Localização</a>
                         </li>
@@ -90,16 +89,16 @@
                     <a id="LogoLink" href="./index.html"><img id="LogoImage" src="./Imagens/WLogo.png" alt=""></a>
                     <ul id="MenuListRight">
                         <li class="MenuLinkList">
-                            <div class="CardápioBorder">
+                            <div class="CardapioBorder">
                             </div>    
-                            <a  href="#firstMenuSection" id="2" onclick="MenuFixedAnimationHidden(), MenuCellPhoneShow(MenuOn = true)" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut()">Cardápio</a>
+                            <a  href="#firstMenuSection" id="2" onclick="MenuFixedAnimationHidden(), MenuCellPhoneShow(MenuOn = true)" onmouseenter="BorderAnimationEnter(this.id)" onmouseleave="BorderAnimationOut(this.id)">Cardápio</a>
                         </li>
-                        <li class="MenuLinkList" style="margin-right: 0%;" id="SocialMediasLi" onmouseenter="showSocialMedias()" onmouseleave="hideSocialMedias()">
+                        <li class="MenuLinkList" style="margin-right: 0%;" id="SocialMediasLi" onclick="showSocialMedias()">
                             <label href="" id="MediaLabel">Redes Sociais</label>
                         </li>
                         
                     </ul>
-                    <ul id="SocialMediasList"onmouseenter="showSocialMedias()" onmouseleave="hideSocialMedias()">      
+                    <ul id="SocialMediasList">      
                         <div id="MediasBorder">
                         </div>              
                             <li class="SocialMediasLink">

@@ -1,35 +1,56 @@
+var AnimationEnter = false;
 function showSocialMedias()
 {
-        document.getElementById("SocialMediasList").style.top = "60%";
-        document.getElementById("MediaLabel").style.color = "#f3f307";
-        document.getElementById("SocialMediasList").style.animation = "MediasAnimation 1s";
-        document.getElementById("SocialMediasList").style.opacity = "100%";
-        document.getElementById("MediasBorder").style.animation = "BorderAnimation 1s";
-        document.getElementById("MediasBorder").addEventListener("animationend", function()
+        if(AnimationEnter == false)
         {
-                document.getElementById("MediasBorder").style.width = "100%"; 
-        })
+                document.getElementById("SocialMediasList").style.top = "60%";
+                document.getElementById("MediaLabel").style.color = "#f3f307";
+                document.getElementById("SocialMediasList").style.animation = "MediasAnimation 1s";
+                document.getElementById("SocialMediasList").style.opacity = "100%";
+                document.getElementById("MediasBorder").style.animation = "BorderAnimation 1s";
+                document.getElementById("SocialMediasList").addEventListener("animationend", function()
+                {
+                        AnimationEnter = true;
+                })
+                document.getElementById("MediasBorder").addEventListener("animationend", function()
+                {
+                        document.getElementById("MediasBorder").style.width = "100%"; 
+                    
+                })
+        }
+      
 }
 function hideSocialMedias()
 {
-        document.getElementById("SocialMediasList").style.top = "-100%";
-        document.getElementById("MediaLabel").style.color = "#cfcf00";
-        document.getElementById("MediasBorder").style.animation = "BorderAnimation2 0.5s";
-        document.getElementById("MediasBorder").style.width = "0%";
-        document.getElementById("SocialMediasList").style.animation = "MediasAnimation2 0.8s ";
-        document.getElementById("SocialMediasList").style.opacity = "0%";
+        if(AnimationEnter == true)
+        {
+                document.getElementById("SocialMediasList").style.top = "-100%";
+                document.getElementById("MediaLabel").style.color = "#cfcf00";
+                document.getElementById("MediasBorder").style.animation = "BorderAnimation2 0.5s";
+                document.getElementById("SocialMediasList").style.animation = "MediasAnimation2 0.8s ";
+                document.getElementById("SocialMediasList").style.opacity = "0%";
+                document.getElementById("SocialMediasList").addEventListener("animationend", function()
+                {
+                        AnimationEnter = false;
+                })
+                document.getElementById("MediasBorder").addEventListener("animationend", function()
+                {
+                        document.getElementById("MediasBorder").style.width = "0%";
+                })
+        }
+     
 }
 function BorderAnimationEnter()
 {
         var currentId = event.target.id;
-        document.getElementsByClassName("CardápioBorder")[currentId].style.animation = "BorderAnimation 0.5s";
-        document.getElementsByClassName("CardápioBorder")[currentId].style.width = "100%"; 
+        document.getElementsByClassName("CardapioBorder")[currentId].style.animation = "BorderAnimation 0.5s";
+        document.getElementsByClassName("CardapioBorder")[currentId].style.width = "100%"; 
 }
 function BorderAnimationOut()
 {
         var currentId = event.target.id;
-        document.getElementsByClassName("CardápioBorder")[currentId].style.animation = "BorderAnimation2 0.5s";
-        document.getElementsByClassName("CardápioBorder")[currentId].style.width = "0%"; 
+        document.getElementsByClassName("CardapioBorder")[currentId].style.animation = "BorderAnimation2 0.5s";
+        document.getElementsByClassName("CardapioBorder")[currentId].style.width = "0%"; 
 }
 
 setInterval(MenuAnimation,1)
@@ -256,29 +277,29 @@ window.addEventListener("scroll", function()
     }
     if(secondSectionDistance < 530)
     {
-        this.document.getElementById("SecondSectionTittle").style.animation = "SectionsAnimation3 1.5s"; 
+        this.document.getElementById("SecondSectionTittle").style.animation = "SectionsAnimation3 1s"; 
         document.getElementById("SecondSectionTittle").addEventListener("animationend", function()
         {
                 document.getElementById("SecondSectionTittle").style.opacity = "100%"; 
            
         })
-        document.querySelectorAll(".MenuSectionTextContainer")[0].style.animation = "SectionsAnimation1 0.8s 1s";
+        document.querySelectorAll(".MenuSectionTextContainer")[0].style.animation = "SectionsAnimation1 0.5s";
         document.querySelectorAll(".MenuSectionTextContainer")[0].addEventListener("animationend", function()
         {
                 document.querySelectorAll(".MenuSectionTextContainer")[0].style.opacity = "100%";
-                document.querySelectorAll(".MenuSectionTextContainer")[1].style.animation = "SectionsAnimation1 0.8s"; 
+                document.querySelectorAll(".MenuSectionTextContainer")[1].style.animation = "SectionsAnimation1 0.5s"; 
                 document.querySelectorAll(".MenuSectionTextContainer")[1].addEventListener("animationend", function()
                 {
                         document.querySelectorAll(".MenuSectionTextContainer")[1].style.opacity = "100%";
-                        document.querySelectorAll(".MenuSectionTextContainer")[2].style.animation = "SectionsAnimation1 0.8s"; 
+                        document.querySelectorAll(".MenuSectionTextContainer")[2].style.animation = "SectionsAnimation1 0.5s"; 
                         document.querySelectorAll(".MenuSectionTextContainer")[2].addEventListener("animationend", function()
                         {
                                 document.querySelectorAll(".MenuSectionTextContainer")[2].style.opacity = "100%";
-                                document.querySelectorAll(".MenuSectionTextContainer")[3].style.animation = "SectionsAnimation1 0.8s"; 
+                                document.querySelectorAll(".MenuSectionTextContainer")[3].style.animation = "SectionsAnimation1 0.5s"; 
                                 document.querySelectorAll(".MenuSectionTextContainer")[3].addEventListener("animationend", function()
                                 {
                                         document.querySelectorAll(".MenuSectionTextContainer")[3].style.opacity = "100%";
-                                        document.querySelectorAll(".MenuSectionTextContainer")[4].style.animation = "SectionsAnimation1 0.8s"; 
+                                        document.querySelectorAll(".MenuSectionTextContainer")[4].style.animation = "SectionsAnimation1 0.5s"; 
                                         document.querySelectorAll(".MenuSectionTextContainer")[4].addEventListener("animationend", function()
                                         {
                                                 document.querySelectorAll(".MenuSectionTextContainer")[4].style.opacity = "100%";     
@@ -291,28 +312,28 @@ window.addEventListener("scroll", function()
                    
                 })
         })
-        document.querySelectorAll(".MenuSectionTextContainer")[5].style.animation = "SectionsAnimation0 0.8s 1s";
+        document.querySelectorAll(".MenuSectionTextContainer")[5].style.animation = "SectionsAnimation0 0.5s";
         document.querySelectorAll(".MenuSectionTextContainer")[5].addEventListener("animationend", function()
         {
                 document.querySelectorAll(".MenuSectionTextContainer")[5].style.opacity = "100%";
-                document.querySelectorAll(".MenuSectionTextContainer")[6].style.animation = "SectionsAnimation0 0.8s"; 
+                document.querySelectorAll(".MenuSectionTextContainer")[6].style.animation = "SectionsAnimation0 0.5s"; 
                 document.querySelectorAll(".MenuSectionTextContainer")[6].addEventListener("animationend", function()
                 {
                         document.querySelectorAll(".MenuSectionTextContainer")[6].style.opacity = "100%";
-                        document.querySelectorAll(".MenuSectionTextContainer")[7].style.animation = "SectionsAnimation0 0.8s"; 
+                        document.querySelectorAll(".MenuSectionTextContainer")[7].style.animation = "SectionsAnimation0 0.5s"; 
                         document.querySelectorAll(".MenuSectionTextContainer")[7].addEventListener("animationend", function()
                         {
                                 document.querySelectorAll(".MenuSectionTextContainer")[7].style.opacity = "100%";
-                                document.querySelectorAll(".MenuSectionTextContainer")[8].style.animation = "SectionsAnimation0 0.8s"; 
+                                document.querySelectorAll(".MenuSectionTextContainer")[8].style.animation = "SectionsAnimation0 0.5s"; 
                                 document.querySelectorAll(".MenuSectionTextContainer")[8].addEventListener("animationend", function()
                                 {
                                         document.querySelectorAll(".MenuSectionTextContainer")[8].style.opacity = "100%";
-                                        document.querySelectorAll(".MenuSectionTextContainer")[9].style.animation = "SectionsAnimation0 0.8s"; 
+                                        document.querySelectorAll(".MenuSectionTextContainer")[9].style.animation = "SectionsAnimation0 0.5s"; 
                                         document.querySelectorAll(".MenuSectionTextContainer")[9].addEventListener("animationend", function()
                                         {
                                                 document.querySelectorAll(".MenuSectionTextContainer")[9].style.opacity = "100%";  
                                         })
-                                        document.querySelectorAll(".MenuSectionTextContainer")[10].style.animation = "SectionsAnimation0 0.8s"; 
+                                        document.querySelectorAll(".MenuSectionTextContainer")[10].style.animation = "SectionsAnimation0 0.5s"; 
                                         document.querySelectorAll(".MenuSectionTextContainer")[10].addEventListener("animationend", function()
                                         {
                                                 document.querySelectorAll(".MenuSectionTextContainer")[10].style.opacity = "100%";     
@@ -400,6 +421,7 @@ function MenuCellPhoneShow()
                 CellPhoneMenu.style.animation = "MenuCellPhoneAnimationShow 1s"
                 CellPhoneMenu.style.opacity = "100%";
                 CellPhoneMenu.style.zIndex = "4";
+                document.getElementById("MediasBorderCellphone").style.animation = "BorderAnimation1 1s"
                 document.getElementById("MenuContainer").style.animation = " MenuIncrease 0.7s"
                 document.getElementById("MenuContainer").style.height = "100%"
                 CellPhoneMenu.addEventListener("animationend", function()
@@ -409,6 +431,7 @@ function MenuCellPhoneShow()
         }
         if(MenuOn ==true)
         {
+                document.getElementById("MediasBorderCellphone").style.animation = "BorderAnimation3 1s "
                 var CellPhoneMenu = document.getElementById("CellPhoneMenuList");
                 document.getElementsByClassName("LineMenuButton")[0].style.backgroundColor = "#cfcf00"
                 document.getElementsByClassName("LineMenuButton")[1].style.backgroundColor = "#cfcf00"
