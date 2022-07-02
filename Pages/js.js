@@ -33,7 +33,6 @@ var total = allName.length;
 var totalTr = document.createElement("tr");
 totalTr.textContent = "Total de clientes: "+total;
 tableElement.appendChild(totalTr);
-
 for(var i = 0; i < allName.length; i++)
 {
     var thisChamadoNumber = chamadoAllNumber[i].textContent;
@@ -42,27 +41,35 @@ for(var i = 0; i < allName.length; i++)
     tdElement.id = "id1"
     tdElement.textContent = allName[i].textContent;
     var tdElement2 = document.createElement("td");
+    var tdElement3 = document.createElement("td");
+    tdElement3.id = "tdBairro";
     tdElement2.textContent = Assunto[i].textContent;
     var trElement = document.createElement("tr");
     trElement.appendChild(tdElement);
     trElement.appendChild(tdElement2);
+    trElement.appendChild(tdElement3);
     var http = new XMLHttpRequest();
-var url_ = 'http://172.32.255.2/admin/suporte_info.php?login=' + thisLogin + '&chamado=' + thisChamadoNumber;
+var url_ = 'http://172.32.255.2/admin/suporte_info.php?login=' + thisLogin +'&chamado=' + thisChamadoNumber + "";
 console.log(url_);
 http.open("GET", url_, true);
 http.onreadystatechange = function(){
    if(http.readyState == 4){
       var html = http.responseText;
-      // converte o retorno em elementos HTML
       html = new DOMParser().parseFromString(html, "text/html");
-      document.querySelectorAll('#id1')[0].innerHTML = html.getElementsByTagName('td')[13].innerHTML.trim();
-   }
+      document.querySelectorAll('#tdBairro')[i].innerHTML = html.getElementsByTagName('td')[13].innerHTML.trim();
+                                            ///// quando da um valor por i, funciona;
+    }
 }
 http.send(null);
     tableElement.appendChild(trElement);
 }
 tagElement.appendChild(tableElement);
 fatherElement.appendChild(tagElement);
+
+
+
+
+
 
 var http = new XMLHttpRequest();
 var url_ = "http://172.32.255.2/admin/suporte_info.php?login=adrianapl&chamado=30062211540049"; // página de onde virá a div
@@ -73,6 +80,7 @@ http.onreadystatechange = function(){
       // converte o retorno em elementos HTML
       html = new DOMParser().parseFromString(html, "text/html");
       document.querySelectorAll('#id1')[0].innerHTML = html.getElementsByTagName('td')[13].innerHTML.trim();
+      
    }
 }
 http.send(null);
